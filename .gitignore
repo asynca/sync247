@@ -1,0 +1,59 @@
+# dotenv environment variables file
+.env
+.env-secrets.json
+.env-firebase.json
+.runtimeconfig.json
+SERVERLESS_DB.json
+IOPA_EDGE_DB.json
+
+# Wrangler variable files
+wrangler.toml
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Logs
+logs
+*.log
+npm-debug.log*
+lerna-debug.log
+
+# Build directories
+build
+dist
+buildnext
+coverage
+
+# Dependency directories
+node_modules
+jspm_packages
+
+# Optional npm cache directory
+.npm
+
+# macOS
+.DS_Store
+
+# Meta repositories
+/iopa/
+/iopa-botadapter/
+/iopa-botcommander/
+/iopa-carrier/
+/iopa-edge/
+/iopa-edge-contrib/
+/iopa-router/
+/iopa-types/
+
+## Do not include /packages/ in above list as its included in version control of meta repository
+node_modules
+.ds_store
+*.tsbuildinfo
