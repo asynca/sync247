@@ -1,0 +1,30 @@
+{
+    "name": "@sync247/capability-msgraph",
+    "version": "3.0.0",
+    "description": "IOPA Middlware for the Sync247 Platform to provide authorization and sync247-specific API methods for the Microsoft Graph",
+    "main": "dist/index.js",
+    "types": "src/index.ts",
+    "ts:main": "src/index.ts",
+    "author": "Guy Barnard",
+    "contributors": [
+        "Guy Barnard",
+        "Sync Labs",
+        "Sync247 contributors"
+    ],
+    "license": "Apache-2.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/asynca/sync247.git"
+    },
+    "scripts": {
+        "build": "tsc"
+    },
+    "dependencies": {
+        "@microsoft/microsoft-graph-client": "^2.2.1",
+        "@microsoft/microsoft-graph-types": "^1.30.0"
+    },
+    "devDependencies": {}
+}
