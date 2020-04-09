@@ -1,0 +1,29 @@
+{
+    "name": "@sync247/skill-teams-to-voice",
+    "version": "1.0.0",
+    "description": "Skill for the Sync247 platform for outbound sms from teams UI to voice carrier",
+    "main": "dist/index.js",
+    "types": "src/index.tsx",
+    "ts:main": "src/index.tsx",
+    "author": "Guy Barnard",
+    "contributors": [
+        "Guy Barnard",
+        "Sync Labs",
+        "Sync247 contributors"
+    ],
+    "license": "Apache-2.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/asynca/sync247.git"
+    },
+    "scripts": {
+        "build": "tsc"
+    },
+    "dependencies": {
+        "reactive-cards": "^1.1.6"
+    },
+    "devDependencies": {}
+}
