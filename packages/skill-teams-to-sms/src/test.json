@@ -1,0 +1,26 @@
+{
+    "type": "messageReaction",
+    "reactionsAdded": [
+        {
+            "type": "plusOne"
+        }
+    ],
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer/",
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "tenantId": "fbe59500-b0cc-491b-aa3e-ffaf2699aec9",
+        "id": "19:387466ea67d445ea9df0dea0c54aaf1c@thread.skype;messageid=1572879742153"
+    },
+    "from": {
+        "id": "28:94a9d0b9-0fa9-4f14-b2e3-f31464fb763a",
+        "name": "sync  d "
+    },
+    "recipient": {
+        "id": "29:1EQUTJXDNE-g2_JSvyX2eKtyU1yWM8hGYn7pMjvw4_gHhs93OyhH0VJIBPR0rzKkz4Q9dYnIK7w6shTFrgsRevw",
+        "name": "Guy Barnard",
+        "aadObjectId": "75193827-3e97-4b5a-8aa8-f506ffb07af0"
+    },
+    "replyToId": "1572879742153"
+}
