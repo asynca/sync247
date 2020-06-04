@@ -1,0 +1,61 @@
+{
+    "name": "@sync247/worker",
+    "version": "1.0.0",
+    "description": "Cloudflare worker for Sync247",
+    "main": "index.js",
+    "author": "Guy Barnard",
+    "contributors": [
+        "Guy Barnard",
+        "Sync Labs",
+        "Sync247 contributors"
+    ],
+    "license": "Apache-2.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/asynca/sync247.git"
+    },
+    "scripts": {
+        "start": "env-cmd -r ./.config/.env-secrets.json -e development envkey-cmd edge-host",
+        "build-dev": "npm run toml-dev && NODE_ENV=development env-cmd -r ./.config/.env-secrets.json -e development envkey-cmd wrangler build",
+        "deploy-dev": "npm run toml-dev && NODE_ENV=development env-cmd -r ./.config/.env-secrets.json -e development envkey-cmd wrangler publish",
+        "deploy-staging": "run toml-staging && NODE_ENV=staging env-cmd -r ./.config/.env-secrets.json -e staging envkey-cmd wrangler publish && rm -rf wrangler.toml",
+        "deploy-prod": "npm run toml-prod && NODE_ENV=production env-cmd -r ./.config/.env-secrets.json -e production envkey-cmd wrangler publish && rm -rf wrangler.toml",
+        "deploy-staging-ci": "run toml-staging-ci && NODE_ENV=staging envkey-cmd wrangler publish && rm -rf wrangler.toml",
+        "deploy-prod-ci": "npm run toml-prod-ci && NODE_ENV=production envkey-cmd wrangler publish && rm -rf wrangler.toml",
+        "dev": "edgedev open npm run edgedev ngrok",
+        "format": "prettier --ignore-path ../../.gitignore --write '**/*.{js,jsx,ts,tsx,json,md}'",
+        "postinstall": "npm link webpack",
+        "edgedev": "edgedev",
+        "emulator": "npm run build && firebase emulators:start --only functions",
+        "tail": "npm run toml-prod && wrangler tail && rm -rf wrangler.toml",
+        "test": "jest ",
+        "toml-dev": "env-cmd -r ./.config/.env-secrets.json -e development envkey-cmd envsub wrangler.template.toml wrangler.toml",
+        "toml-staging": "env-cmd -r ./.config/.env-secrets.json -e staging envkey-cmd envsub wrangler.template.toml wrangler.toml",
+        "toml-prod": "env-cmd -r ./.config/.env-secrets.json -e production envkey-cmd envsub wrangler.template.toml wrangler.toml",
+        "toml-staging-ci": "envkey-cmd envsub wrangler.template.toml wrangler.toml",
+        "toml-prod-ci": "envkey-cmd envsub wrangler.template.toml wrangler.toml"
+    },
+    "dependencies": {
+        "iopa-types": "3.0.0",
+        "iopa": "3.0.0",
+        "@iopa-edge/host-cloudflare": "^3.0.0",
+        "@iopa-edge/jsonwebtoken": "^3.0.0",
+        "@iopa-edge-contrib/firebase": "^1.0.0",
+        "@iopa-edge/types": "^3.0.0",
+        "iopa-router": "^3.0.0",
+        "max-concurrency": "^1.5.7"
+    },
+    "devDependencies": {
+        "@iopa-edge/cli": "^3.0.0",
+        "@iopa-edge/host-cloudflare": "^3.0.0",
+        "@dollarshaveclub/cloudworker": "^0.1.2",
+        "@sucrase/webpack-loader": "^2.0.0",
+        "envkey-cmd": "^10.1.6",
+        "env-cmd": "^10.1.0",
+        "envsub": "^4.0.7",
+        "typescript": "4.1.5"
+    }
+}

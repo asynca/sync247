@@ -1,0 +1,11 @@
+# top level configruation
+type = "webpack"
+account_id = "${CF_ACCOUNT_ID}"
+zone_id = "${CF_ZONE_ID}"
+workers_dev = false
+webpack_config = "./.config/webpack.config.js"
+name = "${CF_WORKER_NAME}"
+route = "${CF_WORKER_ROUTE}/*"
+kv-namespaces = [
+     { binding = "IOPA_EDGE_DB", id = "${CF_SERVERLESS_DB_ID}" }
+]
