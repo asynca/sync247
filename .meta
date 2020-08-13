@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "iopa": "git@github.com:iopa-io/iopa.git",
+    "iopa-botadapter": "git@github.com:iopa-io/iopa-botadapter.git",
+    "iopa-botcommander": "git@github.com:iopa-io/iopa-botcommander.git",
+    "iopa-carrier": "git@github.com:iopa-io/iopa-carrier.git",
+    "iopa-router": "git@github.com:iopa-io/iopa-router.git",
+    "iopa-edge": "git@github.com:iopa-io/iopa-edge.git",
+    "iopa-edge-contrib": "git@github.com:iopa-io/iopa-edge-contrib.git",
+    "iopa-types": "git@github.com:iopa-io/iopa-types.git"
+  }
+}

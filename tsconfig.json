@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "lib": ["esnext"],
+        "target": "esnext",
+        "module": "esnext",
+        "incremental": true,
+        "moduleResolution": "node",
+        "forceConsistentCasingInFileNames": true,
+        "allowSyntheticDefaultImports": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": false,
+        "strictNullChecks": false,
+        "suppressImplicitAnyIndexErrors": true,
+        "noUnusedLocals": false,
+        "esModuleInterop": false,
+        "isolatedModules": false,
+        "resolveJsonModule": true,
+        "downlevelIteration": true,
+        "stripInternal": true,
+        "removeComments": true
+    }
+}
